@@ -29,37 +29,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 
     // 这里我们添加三种路由，分别为 rewrite, rewrite_category, regex
     // 用于 url rewrite 的讲解
-    public function _initRoute() {
-        $router = Yaf_Dispatcher::getInstance()->getRouter();               
-        // rewrite
-        $route = new Yaf_Route_Rewrite(
-            '/article/detail/:articleID',
-            array(
-                'controller' => 'article',
-                'action'     => 'detail',
-            )
-        );
 
-        $router->addRoute('rewrite', $route);         
-        // rewrite_category
-        $route = new Yaf_Route_Rewrite(
-            '/article/detail/:categoryID/:articleID',
-            array(
-                'controller' => 'article',
-                'action'     => 'detail',
-            )
-        );
-
-        $router->addRoute('rewrite_category', $route);        
-        // regex
-        $route = new Yaf_Route_Regex(
-            '#article/([0-9]+).html#',
-            array('controller' => 'article', 'action' => 'detail'),
-            array(1 => 'articleID')
-        );
-
-        $router->addRoute('regex', $route);
-    }
 
     public function _initRedis() {
         if(extension_loaded('Redis')){

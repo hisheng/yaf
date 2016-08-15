@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL ^E_NOTICE);
-date_default_timezone_set('Asia/Chongqing');
+date_default_timezone_set('Asia/Shanghai');
 
 define('CUR_DATE',      date('Y-m-d'));
 define('CUR_DATETIME',  date('Y-m-d H:i:s'));
@@ -52,8 +52,7 @@ define('LIB_PATH',     APP_PATH.'/application/library');
 define('CORE_PATH',    LIB_PATH.'/core');
 define('MODEL_PATH',   APP_PATH.'/application/model');
 define('FUNC_PATH',    APP_PATH.'/application/function');
-define('ADMIN_PATH',   APP_PATH.'/application/modules/Admin');
-
+ 
 // COMMON_PATH
 define('COMMON_PATH', APP_PATH.'/public/common');
 
@@ -65,10 +64,7 @@ define('CSS_PATH', '/css');
 define('JS_PATH',  '/js');
 define('IMG_PATH', '/img');
 
-// Admin CSS, JS PATH
-define('ADMIN_ASSET',  '/admin/assets');
-define('ADMIN_CSS_PATH', '/admin/assets/css');
-define('ADMIN_JS_PATH',  '/admin/assets/js');
+ 
 
 // PHP log file
 define('LOG_FILE', $logFile);
