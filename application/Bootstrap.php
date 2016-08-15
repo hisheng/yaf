@@ -11,6 +11,11 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
         Yaf_Registry::set('helloWorld',$h);*/
     }
 
+    public function __initLoad(){
+        Yaf_Loader::import(APP_PATH.'/application/init.php');
+        Yaf_Loader::import(APP_PATH.'/application/library/vendor/autoload.php');
+    }
+
 
 
 

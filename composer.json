@@ -7,13 +7,13 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
-    },
-    "autoload": {
-      "psr-4": {
-        "Hisheng\\Yaf": ""
-      }
+        "guzzlehttp/guzzle": "^6.2",
+        "monolog/monolog": "^1.21",
+        "illuminate/database": "^5.2",
+        "project-melody/validator": "^1.1"
     }
+
+
 
 	
 }

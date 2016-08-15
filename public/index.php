@@ -3,7 +3,10 @@
  *  WEB 的入口文件
  */
 
-require '../vendor/autoload.php';
+
+
+
+
 
 header('content-Type:text/html;charset=utf-8;');
 define('APP_PATH',  realpath(dirname(__FILE__) . '/../'));
@@ -13,12 +16,15 @@ define('APP_PATH',  realpath(dirname(__FILE__) . '/../'));
  * 因为这样可以根据 ENV 来判断要不要抛出 YAF 本身的前置错误
  * 如配置出错了, 不包含 init.php 会一片空白, 包含了在 DEV 下则会抛出错误提示
  */
-Yaf_Loader::import(APP_PATH.'/application/init.php');
+
+
 
 $app = new Yaf_Application(APP_PATH.'/conf/application.ini');
 
 
 
-$app->bootstrap()->run(); 
+
+
+$app->bootstrap()->run();
  
   
