@@ -1,0 +1,82 @@
+<?php include APP_PATH.'/public/admin/menutop.html' ?>
+
+<div class="main-container" id="main-container">
+<?php include APP_PATH.'/public/admin/menuleft.html' ?>
+
+<div class="main-content">
+	<div class="main-content-inner">
+		<div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="/admin/dashboard">Home</a>
+				</li>
+				<li>
+					<a href="/admin/role">角色权限</a>
+				</li>
+				<li class="active">分配权限</li>
+			</ul>
+		</div>
+
+		<div class="page-content">
+			<div class="page-header">
+				<h1>分配权限</h1>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<form class="form-horizontal" id="assignForm" role="form" action="/admin/role/assignAct" method="post">
+<div class="col-xs-12 col-sm-5">
+<?php foreach($menu as $key => $val){ ?>
+	<div class="control-group">
+		<label class="control-label bolder blue">
+			<?php echo $val['name'] ?>
+		</label>
+		<div class="space-4"></div>
+		<?php foreach($val['sub'] as $k => $v) { ?>
+			<div class="checkbox" style="display:inline-block;">
+				<label>
+					<input name="sub_<?php echo $key ?>[]" class="ace ace-checkbox-2" type="checkbox" value="<?php echo $k ?>"
+						<?php if(in_array($k, $priv)) { ?>
+							checked="checked"
+						<?php } ?>>
+					<span class="lbl">&nbsp;&nbsp;<?php echo $v['name'] ?></span>
+				</label>
+			</div>
+		<?php } ?>
+	</div>
+	<div class="space-4"></div>
+<?php } ?>
+</div>
+						<div class="clearfix">
+							<div class="col-md-offset-3 col-md-9">
+								<button id="btnSubmit" class="btn btn-info" type="button">
+									<i class="ace-icon fa fa-check bigger-110"></i>
+									Submit
+								</button>
+
+								&nbsp; &nbsp; &nbsp;
+								<button class="btn" type="reset">
+									<i class="ace-icon fa fa-undo bigger-110"></i>
+									Reset
+								</button>
+							</div>
+						</div>
+						<input type="hidden" id="roleID" name="roleID" value="<?php echo $roleID ?>" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$('#btnSubmit').click(function(){
+		$('#assignForm').submit();
+	})
+</script>
+<?php include APP_PATH.'/public/admin/footer.html' ?>
