@@ -3,10 +3,11 @@
  *  WEB 的入口文件
  */
 
-
+require '../vendor/autoload.php';
 
 header('content-Type:text/html;charset=utf-8;');
 define('APP_PATH',  realpath(dirname(__FILE__) . '/../'));
+
 /*
  * 之所有要先包含 init.php 而不放在Bootstrap.php 里, 
  * 因为这样可以根据 ENV 来判断要不要抛出 YAF 本身的前置错误
