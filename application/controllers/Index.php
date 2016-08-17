@@ -21,7 +21,7 @@ class IndexController extends Yaf_Controller_Abstract {
 
 
         //test
-        
+
 
         echo \Monolog\Logger::DEBUG;
 
