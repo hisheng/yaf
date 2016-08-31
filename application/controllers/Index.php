@@ -32,6 +32,9 @@ class IndexController extends Yaf_Controller_Abstract {
         var_dump($http->getQuery());
         var_dump($http->getPost());
         var_dump($http->getParams());
+
+
+
     }
 
     public function redis2Action(){
