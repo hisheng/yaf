@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Yaf_Controller_Abstract {
+class IndexController extends BasicController {
     protected $Redis_;
 
 	public function init(){
@@ -33,6 +33,8 @@ class IndexController extends Yaf_Controller_Abstract {
         var_dump($http->getPost());
         var_dump($http->getParams());
 
+
+        echo $this->get('name');
 
 
     }

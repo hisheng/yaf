@@ -21,6 +21,9 @@ define('APP_PATH',  realpath(dirname(__FILE__) . '/../'));
 Yaf_Loader::import(APP_PATH.'/vendor/autoload.php');
 
 
+//加载一些自定义全局参数
+Yaf_Loader::import(APP_PATH.'/application/init.php');
+
 
 
 
