@@ -13,7 +13,6 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 
     public function __initLoad(){
         Yaf_Loader::import(APP_PATH.'/application/init.php');
-        Yaf_Loader::import(APP_PATH.'/application/library/vendor/autoload.php');
     }
 
 

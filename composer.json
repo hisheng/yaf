@@ -7,10 +7,7 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.2",
-        "monolog/monolog": "^1.21",
-        "illuminate/database": "^5.2",
-        "project-melody/validator": "^1.1"
+        "monolog/monolog": "^1.21"
     }
 
 

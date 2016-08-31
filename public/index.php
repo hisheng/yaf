@@ -17,6 +17,11 @@ define('APP_PATH',  realpath(dirname(__FILE__) . '/../'));
  * 如配置出错了, 不包含 init.php 会一片空白, 包含了在 DEV 下则会抛出错误提示
  */
 
+//加载 composer autoload
+Yaf_Loader::import(APP_PATH.'/vendor/autoload.php');
+
+
+
 
 
 $app = new Yaf_Application(APP_PATH.'/conf/application.ini');
