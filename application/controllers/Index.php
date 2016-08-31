@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 class IndexController extends Yaf_Controller_Abstract {
     protected $Redis_;
 
