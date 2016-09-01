@@ -14,7 +14,7 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
     // Load libaray, MySQL model, function
     public function _initCore() {
         // 设置自动加载的目录
-        ini_set('yaf.library', LIB_PATH);
+
 
         // 加载核心组件
         Yaf_Loader::import(CORE_PATH.'/C_Basic.php');

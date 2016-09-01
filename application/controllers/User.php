@@ -16,8 +16,6 @@ class UserController extends BasicController{
     public function showAction(){
         $User=$this->load('user');
         var_dump($User->show());
-
-
     }
 
 }
