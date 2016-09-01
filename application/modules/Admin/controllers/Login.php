@@ -19,4 +19,15 @@ class LoginController extends BasicController{
 
 
     }
+
+    //参数获取  .../admin/login/p/hello/3/hi/33
+    public function pAction($hello,$hi){
+
+        echo $this->getParam('hello');
+        echo '<br/>';
+        echo $this->getParam('hi');
+
+        //view 不用解析
+        Yaf_Dispatcher::getInstance()->autoRender(false);
+    }
 }
