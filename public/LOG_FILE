@@ -1,0 +1,9 @@
+Failed opening template D:\yaf/application/\views\user\show.html: No such file or directory
+Failed opening controller script D:\yaf/application/\controllers\Favicon.ico.php: No such file or directory
+Failed opening template D:\yaf/application/\views\user\show.html: No such file or directory
+There is no method css_pathAction in UserController
+There is no method css_pathAction in UserController
+There is no method css_pathAction in UserController
+There is no method js_pathAction in UserController
+There is no method css_pathAction in UserController
+Failed opening controller script D:\yaf/application/\controllers\Favicon.ico.php: No such file or directory
