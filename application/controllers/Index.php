@@ -42,4 +42,8 @@ class IndexController extends BasicController {
     public function redis2Action(){
     }
 
+    public function helloAction(){
+        echo 'hisheng';
+    }
+
 }
