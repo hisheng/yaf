@@ -30,9 +30,13 @@ Yaf_Loader::import(APP_PATH.'/application/init.php');
 $app = new Yaf_Application(APP_PATH.'/conf/application.ini');
 
 
-
+//print_r($app);
 
 
 $app->bootstrap()->run();
+
+
+
  
   
+//学习yaf比较快的方式 //学习 https://github.com/laruence/yaf/blob/master/tests/ 鸟哥写的测试，可以快速的入门
