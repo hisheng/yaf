@@ -50,6 +50,17 @@ class BasicController extends Yaf_Controller_Abstract {
       return $this->getRequest()->getQuery($key);
     }
   }
+    //获取restful 的 put 以及delete 参数
+    public function getData($key, $filter = TRUE){
+        $data=file_get_contents('php://input');
+        parse_str($data,$parms);
+
+        if($filter){
+            return filterStr($parms[$key]);
+        }else{
+            return $parms[$key];
+        }
+    }
 
   public function getSession($key){
     return Yaf_Session::getInstance()->__get($key);

@@ -189,4 +189,9 @@ class IndexController extends BasicController {
 
     }
 
+    public function yafAction(){
+        Yaf_Dispatcher::getInstance()->autoRender(true);
+        //$this->getView()->assign("html", $html);
+    }
+
 }

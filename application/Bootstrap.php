@@ -21,6 +21,10 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
         Yaf_Loader::import(CORE_PATH.'/Helper.php');
         Yaf_Loader::import(CORE_PATH.'/Model.php');
 
+
+
+        Yaf_Loader::import(APP_PATH.'/application/library/core/My.php');
+
         // 导入 F_Basic.php 与 F_Network.php
         Helper::import('Basic');
         Helper::import('Network');
