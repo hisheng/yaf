@@ -75,4 +75,21 @@ class UserController extends BasicController{
         print_r(json_encode($username));
     }
 
+
+    //下面是  正常的写法
+    public function getAction(){
+        $this->getuser();
+    }
+    public function addAction(){
+        $username=$this->getPost('username');
+        $this->adduser($username);
+    }
+
+    public function putAction(){
+        $this->putuser();
+    }
+    public function deleteAction(){
+        $this->deleteuser();
+    }
+
 }
