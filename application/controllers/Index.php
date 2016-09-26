@@ -17,6 +17,12 @@ class IndexController extends BasicController {
         echo \Monolog\Logger::DEBUG;
 
     }
+    public function httpAction(){
+        var_dump($_SERVER);
+        // http 遵循 客户端-服务器 模型
+
+        //user_agent 为客户端
+    }
 
     public function testAction(){
         //获取 请求的实例
